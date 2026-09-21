@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you cite this computational research thesis, please use the metadata below. No DOI is minted here; do not invent one."
+type: thesis
+title: "NSTG CaseCards as predicates for tip-ODE forcing admission without guideline-to-Θ leakage"
+authors:
+  - family-names: Ogbonna
+    given-names: Kelechi Emeka
+    email: kelechiogbonna300@gmail.com
+    alias: cloudynirvana
+abstract: >-
+  Can NSTG CaseCards encode the Thesis #19 admission predicates so that
+  guideline or knowledge text is refused as a coefficient write, while a
+  protocol-constant known forcing with named provenance is still admitted?
+  On this ledger they can. The legal card stores the checks as tokens and
+  contains no digit. Two poisoned cards are refused by the loader. Twenty
+  calls are issued. Nineteen return refused, including guideline prose aimed
+  at a kinetic name, a numeral parsed from a dose-like sentence, a soft prior,
+  and a score-copied amplitude. One call admits row_north as the provenance
+  of u_phyto = 1. The SHA-256 of kinetic Θ is unchanged by that admission.
+  The forcing digest changes. The admitted payload does not contain the
+  guideline sentence. Research only. Not a medical device. No document DOI.
+keywords:
+  - NSTG CaseCard
+  - admission predicate
+  - known forcing
+  - guideline leakage
+  - kinetic parameter digest
+  - tip ODE
+  - provenance
+  - research-only
+license: MIT
+date-released: "2026-09-21"
+url: "https://github.com/cloudynirvana/thesis-31-casecards-forcing-admission-predicates"
+repository-code: "https://github.com/cloudynirvana/thesis-31-casecards-forcing-admission-predicates"
+preferred-citation:
+  type: thesis
+  title: "NSTG CaseCards as predicates for tip-ODE forcing admission without guideline-to-Θ leakage"
+  authors:
+    - family-names: Ogbonna
+      given-names: Kelechi Emeka
+  year: 2026
+  month: 9
+  url: "https://github.com/cloudynirvana/thesis-31-casecards-forcing-admission-predicates"
+  notes: "Thesis #31. Depends on Thesis #2 and Thesis #19. Computational research. Predicate encoding on a toy tip field, not a clinical result. No document DOI. Not a dose or efficacy claim."

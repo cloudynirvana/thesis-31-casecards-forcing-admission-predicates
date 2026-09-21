@@ -1,0 +1,10 @@
+{
+  "card_id": "cc_poison_leaf",
+  "smuggle": 0.42,
+  "nstg_touchpoints": [
+    {
+      "role": "constraint",
+      "constraint_statement": "A theme name without a numeral."
+    }
+  ]
+}

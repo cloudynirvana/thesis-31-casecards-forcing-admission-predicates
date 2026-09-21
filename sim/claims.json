@@ -1,0 +1,41 @@
+{
+  "note": "Declared rows for this deposit. Not a transcription of another results file. side_score is off the card and is not an eligibility input.",
+  "rows": [
+    {
+      "id": "row_north",
+      "label": "north",
+      "claim_token": "claim_three",
+      "pains_token": "clear",
+      "unit": "surrogate_token",
+      "side_score": "-1.250000"
+    },
+    {
+      "id": "row_east",
+      "label": "east",
+      "claim_token": "claim_two",
+      "pains_token": "clear",
+      "unit": "surrogate_token"
+    },
+    {
+      "id": "row_south",
+      "label": "south",
+      "claim_token": "claim_three",
+      "pains_token": "flagged",
+      "unit": "surrogate_token"
+    },
+    {
+      "id": "row_west",
+      "label": "west",
+      "claim_token": "claim_three",
+      "pains_token": "clear",
+      "unit": "surrogate_token"
+    },
+    {
+      "id": "row_centre",
+      "label": "centre",
+      "claim_token": "claim_two",
+      "pains_token": "flagged",
+      "unit": "surrogate_token"
+    }
+  ]
+}

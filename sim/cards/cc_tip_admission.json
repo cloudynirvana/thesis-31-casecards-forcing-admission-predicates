@@ -1,0 +1,93 @@
+{
+  "card_id": "cc_tip_admission",
+  "schema": "nstg_casecard_predicate",
+  "disease": {
+    "name": "research framing for a known forcing slot",
+    "framing": "This card names a protocol-constant forcing and the checks that may admit it. The sentence is knowledge. A coefficient is a different object."
+  },
+  "systemic_axes": [
+    {
+      "id": "axis_input_versus_coefficient",
+      "layer": "metabolism",
+      "role": "constraint"
+    },
+    {
+      "id": "axis_guideline_theme",
+      "layer": "host",
+      "role": "constraint"
+    }
+  ],
+  "observables": [
+    {
+      "id": "obs_theta_digest",
+      "statement": "The kinetic digest is compared before and after every call.",
+      "research_only": "true"
+    },
+    {
+      "id": "obs_forcing_digest",
+      "statement": "The forcing digest may change only when a call is admitted.",
+      "research_only": "true"
+    }
+  ],
+  "candidate_mechanisms": [
+    {
+      "id": "known_forcing_is_an_input",
+      "status": "hypothesis",
+      "statement": "A protocol-constant schedule can be admitted as an input while the kinetic strings stay fixed."
+    },
+    {
+      "id": "guideline_text_is_not_a_coefficient",
+      "status": "hypothesis",
+      "statement": "A constraint sentence on this card cannot be written into a coordinate of theta."
+    }
+  ],
+  "falsifiers": [
+    {
+      "id": "f_theta_moves",
+      "mechanism_id": "known_forcing_is_an_input",
+      "if_observed": "The kinetic digest changes on a call.",
+      "then_reject": "The card failed to keep a write out of theta."
+    },
+    {
+      "id": "f_prose_admitted",
+      "mechanism_id": "guideline_text_is_not_a_coefficient",
+      "if_observed": "Guideline or knowledge prose appears in theta or in the admitted forcing payload.",
+      "then_reject": "The card leaked text into a coefficient or a schedule."
+    }
+  ],
+  "nstg_touchpoints": [
+    {
+      "id": "tp_theme_only",
+      "role": "constraint",
+      "constraint_statement": "A guideline theme may be named on this card. The theme is a constraint on what the card is allowed to say. It is not a rate, a dose, or a coordinate."
+    }
+  ],
+  "predicates": [
+    {"check": "kind", "expect": "score_record", "reason": "not_a_score_record"},
+    {"check": "kind_not", "expect": "guideline_text", "reason": "guideline_text_as_write"},
+    {"check": "kind_not", "expect": "knowledge_text", "reason": "knowledge_text_as_write"},
+    {"check": "kind_not", "expect": "utility", "reason": "utility_not_an_input"},
+    {"check": "kind_not", "expect": "parsed_numeral", "reason": "parsed_guideline_numeral"},
+    {"check": "rule_not", "expect": "soft_prior", "reason": "soft_prior"},
+    {"check": "rule_not", "expect": "soft_weight", "reason": "soft_weight"},
+    {"check": "rule_not", "expect": "guideline_prose", "reason": "guideline_prose_rule"},
+    {"check": "destination_not_in", "expect": "theta", "reason": "theta_destination"},
+    {"check": "destination", "expect": "u_phyto", "reason": "symbol"},
+    {"check": "library_sha", "expect": "pin", "reason": "library_sha"},
+    {"check": "engine", "expect": "null", "reason": "engine"},
+    {"check": "may_enter_theta", "expect": "false", "reason": "may_enter_theta"},
+    {"check": "claim_token", "expect": "claim_three", "reason": "claim"},
+    {"check": "pains_token", "expect": "clear", "reason": "pains"},
+    {"check": "unit", "expect": "surrogate_token", "reason": "unit"},
+    {"check": "amplitude_rule", "expect": "protocol_constant", "reason": "amplitude_rule"},
+    {"check": "prose_absent", "expect": "card_strings", "reason": "text_equals_card_prose"},
+    {"check": "provenance_note", "expect": "empty", "reason": "guideline_text_in_provenance"},
+    {"check": "slot", "expect": "empty", "reason": "slot_occupied"}
+  ],
+  "protocol": {
+    "destination_symbol": "u_phyto",
+    "amplitude_rule": "protocol_constant",
+    "amplitude_token": "unit_schedule"
+  },
+  "disclaimer": "Research card only. Not a medical device, not dosing, not a cure, and not clinical decision support."
+}

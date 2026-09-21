@@ -1,0 +1,640 @@
+{
+  "rng_draws": 0,
+  "card_pin": "9107ac051afa431e574da424a051af94d03c7d148679d9bd23d7d2b23b97fae6",
+  "claims_pin": "ac1afc2410a64ab9919bac96027efe4a7dfff023fdaa5e75aa3ceb5f06238eed",
+  "poison_leaf_pin": "4fbf502fc8bdd31df1e8ee6c974a22911cfd5b01671c9243f03377ecdb7e99ef",
+  "poison_prose_pin": "a2ddeaedca9e34d11de4fe88cd573586337527af1e2ff4019aacab98c397fc57",
+  "protocol_table_sha256": "d3de6fc10e67876516038dd647dfe843c1e6e4ebed0006ad6b7293f97bc5137d",
+  "protocol_table": {
+    "unit_schedule": "1"
+  },
+  "theta": {
+    "u_in": "0.40",
+    "k_glyc": "0.80",
+    "g": "0.25",
+    "d0": "0.20",
+    "d_u": "0.30",
+    "s": "0.50"
+  },
+  "theta_sha256": "912e19683e84f4fe7c4cddee6672eb08d26af94ddf79dcde23d876a8eac7b251",
+  "theta_sha256_after": "912e19683e84f4fe7c4cddee6672eb08d26af94ddf79dcde23d876a8eac7b251",
+  "theta_bytes_unchanged": true,
+  "null_forcing_sha256": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+  "admitted_forcing_sha256": "97441597a8bc1d05d0bd207c73b1898a6d804c11224340417aa54e499f71ce62",
+  "admitted_forcing": {
+    "symbol": "u_phyto",
+    "amplitude": "1",
+    "amplitude_rule": "protocol_constant",
+    "amplitude_token": "unit_schedule",
+    "provenance": {
+      "card_id": "cc_tip_admission",
+      "row_id": "row_north",
+      "claim_token": "claim_three",
+      "pains_token": "clear",
+      "library_pin": "9107ac051afa431e574da424a051af94d03c7d148679d9bd23d7d2b23b97fae6",
+      "score_copied": false,
+      "guideline_text_copied": false
+    }
+  },
+  "y0": {
+    "G": "1",
+    "R": "0.25",
+    "A": "0.60"
+  },
+  "horizon": [
+    0,
+    40.0
+  ],
+  "n_nodes": 401,
+  "rtol": 1e-08,
+  "atol": 1e-11,
+  "card_loader_refusals": [
+    {
+      "fixture": "cc_poison_leaf",
+      "status": "refused",
+      "layer": "card_loader",
+      "reasons": [
+        "numeric_leaf"
+      ]
+    },
+    {
+      "fixture": "cc_poison_prose",
+      "status": "refused",
+      "layer": "card_loader",
+      "reasons": [
+        "dose_token",
+        "schedule_token",
+        "numeric_token_in_prose"
+      ]
+    }
+  ],
+  "eligibility": [
+    {
+      "id": "row_north",
+      "label": "north",
+      "claim_token": "claim_three",
+      "pains_token": "clear",
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "row_east",
+      "label": "east",
+      "claim_token": "claim_two",
+      "pains_token": "clear",
+      "eligible": false,
+      "reasons": [
+        "claim"
+      ]
+    },
+    {
+      "id": "row_south",
+      "label": "south",
+      "claim_token": "claim_three",
+      "pains_token": "flagged",
+      "eligible": false,
+      "reasons": [
+        "pains"
+      ]
+    },
+    {
+      "id": "row_west",
+      "label": "west",
+      "claim_token": "claim_three",
+      "pains_token": "clear",
+      "eligible": true,
+      "reasons": []
+    },
+    {
+      "id": "row_centre",
+      "label": "centre",
+      "claim_token": "claim_two",
+      "pains_token": "flagged",
+      "eligible": false,
+      "reasons": [
+        "claim",
+        "pains"
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "call_id": "R01",
+      "row_id": null,
+      "kind": "guideline_text",
+      "destination": "d0",
+      "amplitude_rule": "guideline_prose",
+      "status": "refused",
+      "reasons": [
+        "not_a_score_record",
+        "guideline_text_as_write",
+        "guideline_prose_rule",
+        "theta_destination",
+        "symbol",
+        "amplitude_rule",
+        "text_equals_card_prose"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R02",
+      "row_id": null,
+      "kind": "knowledge_text",
+      "destination": "k_glyc",
+      "amplitude_rule": "knowledge_prose",
+      "status": "refused",
+      "reasons": [
+        "not_a_score_record",
+        "knowledge_text_as_write",
+        "theta_destination",
+        "symbol",
+        "amplitude_rule",
+        "text_equals_card_prose"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R03",
+      "row_id": null,
+      "kind": "parsed_numeral",
+      "destination": "d0",
+      "amplitude_rule": "parsed_guideline_numeral",
+      "status": "refused",
+      "reasons": [
+        "not_a_score_record",
+        "parsed_guideline_numeral",
+        "theta_destination",
+        "symbol",
+        "amplitude_rule"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R04",
+      "row_id": null,
+      "kind": "guideline_text",
+      "destination": "u_phyto",
+      "amplitude_rule": "guideline_prose",
+      "status": "refused",
+      "reasons": [
+        "not_a_score_record",
+        "guideline_text_as_write",
+        "guideline_prose_rule",
+        "amplitude_rule",
+        "text_equals_card_prose"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R05",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "copy_score",
+      "status": "refused",
+      "reasons": [
+        "amplitude_rule"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R06",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "d0",
+      "amplitude_rule": "soft_prior",
+      "status": "refused",
+      "reasons": [
+        "soft_prior",
+        "theta_destination",
+        "symbol",
+        "amplitude_rule"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R07",
+      "row_id": null,
+      "kind": "anecdote",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "not_a_score_record"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R08",
+      "row_id": "row_east",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "claim"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R09",
+      "row_id": "row_south",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "pains"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R10",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "engine"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R11",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "may_enter_theta"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R12",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "library_sha"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R13",
+      "row_id": "row_north",
+      "kind": "utility",
+      "destination": "g",
+      "amplitude_rule": "copy_score",
+      "status": "refused",
+      "reasons": [
+        "not_a_score_record",
+        "utility_not_an_input",
+        "theta_destination",
+        "symbol",
+        "amplitude_rule"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R14",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "N_ROS",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "symbol"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R15",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "guideline_text_in_provenance"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "3496b5afc0cde2d2ed7cfff1de54dfcffa02c5b6115b429c9a3b51b3f928278c",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "A01",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "admitted",
+      "reasons": [],
+      "theta_unchanged": true,
+      "forcing_digest": "97441597a8bc1d05d0bd207c73b1898a6d804c11224340417aa54e499f71ce62",
+      "forcing_changed": true
+    },
+    {
+      "call_id": "R16",
+      "row_id": "row_west",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "slot_occupied"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "97441597a8bc1d05d0bd207c73b1898a6d804c11224340417aa54e499f71ce62",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R17",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "copy_score",
+      "status": "refused",
+      "reasons": [
+        "amplitude_rule"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "97441597a8bc1d05d0bd207c73b1898a6d804c11224340417aa54e499f71ce62",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R18",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "s",
+      "amplitude_rule": "soft_weight",
+      "status": "refused",
+      "reasons": [
+        "soft_weight",
+        "theta_destination",
+        "symbol",
+        "amplitude_rule"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "97441597a8bc1d05d0bd207c73b1898a6d804c11224340417aa54e499f71ce62",
+      "forcing_changed": false
+    },
+    {
+      "call_id": "R19",
+      "row_id": "row_north",
+      "kind": "score_record",
+      "destination": "u_phyto",
+      "amplitude_rule": "protocol_constant",
+      "status": "refused",
+      "reasons": [
+        "unit"
+      ],
+      "theta_unchanged": true,
+      "forcing_digest": "97441597a8bc1d05d0bd207c73b1898a6d804c11224340417aa54e499f71ce62",
+      "forcing_changed": false
+    }
+  ],
+  "n_calls": 20,
+  "n_admitted": 1,
+  "n_refused": 19,
+  "legal_card_digit_count": 0,
+  "side_score_on_card": false,
+  "equilibria": {
+    "null": {
+      "G": 0.5,
+      "R": 0.5,
+      "A": 0.533333
+    },
+    "admitted": {
+      "G": 0.5,
+      "R": 0.2,
+      "A": 0.666667
+    }
+  },
+  "terminal_gaps": {
+    "null_R": 2.7955500024268165e-05,
+    "null_A": 1.6569438113789303e-05,
+    "admitted_R": 8.226802572508518e-10,
+    "admitted_A": 6.100044469548038e-09
+  },
+  "closed_form_gaps": {
+    "null": {
+      "G": 4.771706363371209e-09,
+      "R": 1.8775193066922213e-09
+    },
+    "admitted": {
+      "G": 5.1575033133133275e-09,
+      "R": 2.097223533725767e-09
+    },
+    "score_copy": {
+      "G": 5.263302571556494e-09,
+      "R": 1.7268603214048994e-09
+    },
+    "affine": {
+      "G": 5.08579089952832e-09,
+      "R": 1.93120838765104e-09
+    }
+  },
+  "g_path_gap_null_vs_admitted": 8.973758403030274e-10,
+  "state_gap_null_vs_admitted": 0.29997204367729546,
+  "null_state_sha256": "19cee1beffa6aba1c06141f488892c6bb28e746caf34c01bf616b7073bdb6690",
+  "admitted_state_sha256": "deaf39441d6ee1a7d32d1f9040ae365d45a594664cd0ee2c13aa6a313ae7619d",
+  "samples": {
+    "null": [
+      {
+        "t": 0.0,
+        "G": 1.0,
+        "R": 0.25,
+        "A": 0.6
+      },
+      {
+        "t": 5.0,
+        "G": 0.509158,
+        "R": 0.466291,
+        "A": 0.622125
+      },
+      {
+        "t": 10.0,
+        "G": 0.500168,
+        "R": 0.488666,
+        "A": 0.547047
+      },
+      {
+        "t": 20.0,
+        "G": 0.5,
+        "R": 0.498474,
+        "A": 0.534289
+      },
+      {
+        "t": 40.0,
+        "G": 0.5,
+        "R": 0.499972,
+        "A": 0.53335
+      }
+    ],
+    "admitted": [
+      {
+        "t": 0.0,
+        "G": 1.0,
+        "R": 0.25,
+        "A": 0.6
+      },
+      {
+        "t": 5.0,
+        "G": 0.509158,
+        "R": 0.225361,
+        "A": 0.705421
+      },
+      {
+        "t": 10.0,
+        "G": 0.500168,
+        "R": 0.202471,
+        "A": 0.667931
+      },
+      {
+        "t": 20.0,
+        "G": 0.5,
+        "R": 0.200017,
+        "A": 0.66663
+      },
+      {
+        "t": 40.0,
+        "G": 0.5,
+        "R": 0.2,
+        "A": 0.666667
+      }
+    ],
+    "score_copy_not_admitted": [
+      {
+        "t": 0.0,
+        "G": 1.0,
+        "R": 0.25,
+        "A": 0.6
+      },
+      {
+        "t": 5.0,
+        "G": 0.509158,
+        "R": 0.195139,
+        "A": 0.719903
+      },
+      {
+        "t": 10.0,
+        "G": 0.500168,
+        "R": 0.175421,
+        "A": 0.683552
+      },
+      {
+        "t": 20.0,
+        "G": 0.5,
+        "R": 0.173918,
+        "A": 0.681476
+      },
+      {
+        "t": 40.0,
+        "G": 0.5,
+        "R": 0.173913,
+        "A": 0.681481
+      }
+    ],
+    "affine_not_admitted": [
+      {
+        "t": 0.0,
+        "G": 1.0,
+        "R": 0.25,
+        "A": 0.6
+      },
+      {
+        "t": 5.0,
+        "G": 0.509158,
+        "R": 0.251376,
+        "A": 0.693968
+      },
+      {
+        "t": 10.0,
+        "G": 0.500168,
+        "R": 0.226902,
+        "A": 0.654607
+      },
+      {
+        "t": 20.0,
+        "G": 0.5,
+        "R": 0.223504,
+        "A": 0.653805
+      },
+      {
+        "t": 40.0,
+        "G": 0.5,
+        "R": 0.223464,
+        "A": 0.653881
+      }
+    ]
+  },
+  "contrasts": {
+    "side_score": "-1.250000",
+    "soft_prior_mean_d0": "0.22500000",
+    "soft_prior_posterior_d0": "0.21250000",
+    "soft_prior_theta_sha256": "c5cc4f62f6b1075847c0c24980fc012938c480310f8ebe4f0969f216cc9513e6",
+    "soft_prior_written_to_ledger_theta": false,
+    "score_copy_amplitude": "1.250000",
+    "affine_amplitude": "0.82500000",
+    "parsed_numeral_not_written": "0.42",
+    "anecdote": "An unpublished note said a coordinate moved.",
+    "anecdote_recomputed": false
+  },
+  "predicate_reasons_in_card_order": [
+    "not_a_score_record",
+    "guideline_text_as_write",
+    "knowledge_text_as_write",
+    "utility_not_an_input",
+    "parsed_guideline_numeral",
+    "soft_prior",
+    "soft_weight",
+    "guideline_prose_rule",
+    "theta_destination",
+    "symbol",
+    "library_sha",
+    "engine",
+    "may_enter_theta",
+    "claim",
+    "pains",
+    "unit",
+    "amplitude_rule",
+    "text_equals_card_prose",
+    "guideline_text_in_provenance",
+    "slot_occupied"
+  ],
+  "constraint_statement": "A guideline theme may be named on this card. The theme is a constraint on what the card is allowed to say. It is not a rate, a dose, or a coordinate.",
+  "framing": "This card names a protocol-constant forcing and the checks that may admit it. The sentence is knowledge. A coefficient is a different object."
+}
